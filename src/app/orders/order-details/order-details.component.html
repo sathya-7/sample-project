@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<!-- details of the customer and update in the field below -->
+<!-- <div *ngIf = "order"> -->
+<!-- <div *ngForIn = "let details in order"> -->
+<label for="id"> Order Id</label><br>
+<input type="number" name="id" [(ngModel)]="order.id" disabled> <br><br>
+<label for="userName">Name : </label> <br>
+<input type="text" name="userName" [(ngModel)]="order.name" /><br><br>
+<label for="orderDetails">Description : </label><br>
+<input type="text" name="orderTitle" [(ngModel)]="order.discription" /><br><br>
+<button (click)="updateData()">Update</button>
+<!-- </div> -->
+<!-- </div> -->

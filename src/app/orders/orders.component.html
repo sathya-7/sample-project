@@ -1,0 +1,22 @@
+<div [style.display]="display3">
+    <h1>{{title}}</h1>
+    <label for="id"> Order Id</label><br>
+    <input type="number" name="id" [(ngModel)]="order.id"> <br><br>
+    <label for="userName">Name : </label> <br>
+    <input type="text" name="userName" [(ngModel)]="order.name" /><br><br>
+    <label for="orderDetails">Description : </label><br>
+    <input type="text" name="orderTitle" [(ngModel)]="order.discription" /><br><br>
+    <button (click)="save()">save</button>
+</div>    
+<div [style.display]="display2">
+    <h1>{{title}}</h1>
+    <h3>ORDER ID    : {{order.id}}</h3>
+    <h3>NAME        : {{order.name}}</h3>
+    <h3>DISCRIPTION : {{order.discription}}</h3>
+    <button (click)="edit()">Edit</button>
+    <button (click)="back()">Back</button>
+</div>
+
+
+<app-order-details [style.display]="display" [title]="title" [order] = "order" (sendData)="recieveData($event)"></app-order-details>
+
